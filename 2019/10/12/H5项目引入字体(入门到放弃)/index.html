@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Hello World | 向着光亮的地方
+      H5项目引入字体(入门到放弃) | 向着光亮的地方
     
   </title>
   <meta name="author" content="Franco lrxu">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			Current post&nbsp;:&nbsp;《Hello World》
+			Current post&nbsp;:&nbsp;《H5项目引入字体(入门到放弃)》
 		
 	</p>
 
@@ -277,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/10/10/hello-world/" itemprop="url">
-		Hello World
+	<a href="/2019/10/12/H5项目引入字体(入门到放弃)/" itemprop="url">
+		H5项目引入字体(入门到放弃)
 	</a>
 
 	</div>
@@ -291,9 +291,9 @@
 
 	Posted on
 
-	<a href="/2019/10/10/hello-world/" itemprop="url">
-		<time datetime="2019-10-10T02:20:36.302Z" itemprop="datePublished">
-	  		2019-10-10
+	<a href="/2019/10/12/H5项目引入字体(入门到放弃)/" itemprop="url">
+		<time datetime="2019-10-12T05:01:21.544Z" itemprop="datePublished">
+	  		2019-10-12
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +309,9 @@
 
 	Updated on
 
-	<a href="/2019/10/10/hello-world/" itemprop="url">
-		<time datetime="2019-10-10T02:20:36.302Z" itemprop="dateUpdated">
-	  		2019-10-10
+	<a href="/2019/10/12/H5项目引入字体(入门到放弃)/" itemprop="url">
+		<time datetime="2019-10-12T05:01:21.544Z" itemprop="dateUpdated">
+	  		2019-10-12
 	  </time>
 	</a> 
 
@@ -320,7 +320,13 @@
 		</span>
 		<span>
 			<i class="fa fa-tags"></i>
-					
+			
+	
+		<a href="/tags/字体篇问题/" class=" ">
+			字体篇问题
+		</a>
+	
+		
 		</span>
 		
 		
@@ -330,20 +336,41 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+		<h3 id="H5项目引入字体"><a href="#H5项目引入字体" class="headerlink" title="H5项目引入字体"></a><strong>H5项目引入字体</strong></h3><p><strong>方法1：</strong><br>1.下载所需要的字体，.ttf格式本文以（FZCYJ.ttf 为例）<br>2.先自己定义一个font.css文件，字体文件的路径引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@font-face &#123;</span><br><span class="line">  font-family: &quot;华文行楷&quot;;</span><br><span class="line">  src: url(&apos;stxingka.ttf&apos;);</span><br><span class="line">  font-weight: normal;</span><br><span class="line">  font-style: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>3.App.vue中的style里引入 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;less&quot; rel=&quot;stylesheet/less&quot;&gt;</span><br><span class="line">  @import &quot;./common/font/font.css&quot;;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>4、添加loader</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">        &#123;</span><br><span class="line">            test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,</span><br><span class="line">            loader: &apos;url-loader&apos;,</span><br><span class="line">            options: &#123;</span><br><span class="line">                limit: 10000,</span><br><span class="line">                name: utils.assetsPath(&apos;fonts/[name].[hash:7].[ext]&apos;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>5.使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;less&quot; scoped&gt;</span><br><span class="line">    .header&#123;</span><br><span class="line">        font-family: &quot;华文行楷&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-	
+<p><strong>上述方法弊端：</strong></p>
+<pre><code>ttf文件教大，页面加载过慢，影响用户体验
+解决方向：压缩ttf文件</code></pre><p><strong>**方法2：</strong> font-spider（字蛛）压缩ttf**</p>
+<pre><code>先附上官方链接：http://font-spider.org/
+
+GITHUB：https://github.com/aui/font-spider/blob/master/README-ZH-CN.md
+
+使用教程：https://www.jianshu.com/p/8ef246692d14</code></pre><p><strong>上述方法弊端</strong></p>
+<pre><code>font-spider原理是解析html页面中的含有中文字的标签，然后解析标签，将需要的ttf压缩，将压缩后的ttf文件放到项目中去，**但是，这种ttf文件会解析页面中已经存在的字体，而我们的项目是单页面应用，都是打包后的js文件，没有像静态页面中已存在的字体**，所以当我们把压缩好的ttf文件放到静态页面中尝试时，确实是有效的，可当我们放到项目中就失效了，这是我能想到能解释这个现象的唯一原因了。</code></pre><p>所以怎么办？<br><strong>方法3：</strong><br>在万籁俱寂之时，为我无意间翻到了一个网站叫‘有字库“，网址是：<a href="https://www.webfont.com" target="_blank" rel="noopener">https://www.webfont.com</a><br>具体使用方法</p>
+<pre><code>1、注册登录
+2、检索到需要的字体
+3、点击使用，下面照搬就行</code></pre><p><img src="https://img-blog.csdnimg.cn/20190904204804452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzNjgzOTc=,size_16,color_FFFFFF,t_70" alt="avatar"><br><img src="https://img-blog.csdnimg.cn/20190904204837452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzNjgzOTc=,size_16,color_FFFFFF,t_70" alt="avatar"><br>这个在线字体库的唯一的优势就是它的js文件通过cdn加速过，加载字体文件的速度提高了，其他并没有什么特别之处。<strong>但是，为什么我后来又放弃了呢？当你搜一下下面的字体时突然发现</strong><br><img src="https://img-blog.csdnimg.cn/20190904205009699.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzNjgzOTc=,size_16,color_FFFFFF,t_70" alt="avatar"><br>兄弟有钱不？</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><pre><code>如果你的产品跟你说：“去他妈的用户体验。”我强烈推荐方法1
+如果你使用的前端项目不是基于node应用使用方法2，且你不想这么费事，那就方法3。</code></pre><h1 id="敲黑板"><a href="#敲黑板" class="headerlink" title="敲黑板"></a>敲黑板</h1><pre><code>天真的你们是不是以为这就完了，还有方法4呢？我怎么可能不解决问题就结束了呢？史上最强的解决方案来啦。。。
+我：&quot;那个，口渴吗？&quot;
+她：“什么事？”
+我：“这个图能帮我切一下吗？”
+她：“行啊！”
+我：“顺便把这个字体也放进去吧！”
+她：“可以的，现在就要吗？”
+我：“没事没事，你慢慢做，我不急”
+...半个小时后，美团的小哥在楼梯间吼道：“徐先生，徐先生，您的奶茶到了！”
+完结</code></pre>	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -361,10 +388,10 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/10/12/css技巧/" title="css技巧" rel="prev">
-				&laquo;Pre post
-			</a>
 		
+			<a href="/2019/10/12/移动端H5/" title="移动端H5碰到的问题" rel="next">
+				Next post&raquo;
+			</a>
 			
 	</span>
 
@@ -380,30 +407,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/10/12/H5（nuxt）项目引入字体(入门到放弃)/" title="H5（nuxt）项目引入字体(入门到放弃)">
-								H5（nuxt）项目引入字体(入门到放弃)			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十月 12日, 2019				
-							</p>
-							<p class="relate-post-content">
-								H5（nuxt）项目引入字体方法1：1.下载所需要的字体，.ttf格式本文以（FZCYJ.ttf 为例）2.先自己定义一个font.css文件，字体文件的路径引入
-1234567@font-face &#123;  font-fami...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/10/12/H5（nuxt）项目引入字体(入门到放弃)/" title="H5（nuxt）项目引入字体(入门到放弃)">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="H5（nuxt）项目引入字体(入门到放弃)"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
