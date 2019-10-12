@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>H5（nuxt）项目引入字体(入门到放弃) | 向着光亮的地方</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="H5（nuxt）项目引入字体方法1：1.下载所需要的字体，.ttf格式本文以（FZCYJ.ttf 为例）2.先自己定义一个font.css文件，字体文件的路径引入 1234567@font-face &amp;#123;  font-family: &amp;quot;华文行楷&amp;quot;;  src: url(&amp;apos;stxingka.ttf&amp;apos;);  font-weight: normal;  f">
+<meta name="keywords" content="前端全栈 大前端 前端工程化 移动端H5 小程序 vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5（nuxt）项目引入字体(入门到放弃)">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/H5（nuxt）项目引入字体(入门到放弃)/index.html">
+<meta property="og:site_name" content="向着光亮的地方">
+<meta property="og:description" content="H5（nuxt）项目引入字体方法1：1.下载所需要的字体，.ttf格式本文以（FZCYJ.ttf 为例）2.先自己定义一个font.css文件，字体文件的路径引入 1234567@font-face &amp;#123;  font-family: &amp;quot;华文行楷&amp;quot;;  src: url(&amp;apos;stxingka.ttf&amp;apos;);  font-weight: normal;  f">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="en-resource://database/812:1">
+<meta property="og:image" content="en-resource://database/814:1">
+<meta property="og:image" content="en-resource://database/816:1">
+<meta property="og:updated_time" content="2019-10-12T05:01:46.301Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5（nuxt）项目引入字体(入门到放弃)">
+<meta name="twitter:description" content="H5（nuxt）项目引入字体方法1：1.下载所需要的字体，.ttf格式本文以（FZCYJ.ttf 为例）2.先自己定义一个font.css文件，字体文件的路径引入 1234567@font-face &amp;#123;  font-family: &amp;quot;华文行楷&amp;quot;;  src: url(&amp;apos;stxingka.ttf&amp;apos;);  font-weight: normal;  f">
+<meta name="twitter:image" content="en-resource://database/812:1">
+  
+    <link rel="alternate" href="/atom.xml" title="向着光亮的地方" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">向着光亮的地方</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">莲蓉苞</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-H5（nuxt）项目引入字体(入门到放弃)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/12/H5（nuxt）项目引入字体(入门到放弃)/" class="article-date">
+  <time datetime="2019-10-12T05:01:21.544Z" itemprop="datePublished">2019-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      H5（nuxt）项目引入字体(入门到放弃)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="H5（nuxt）项目引入字体"><a href="#H5（nuxt）项目引入字体" class="headerlink" title="H5（nuxt）项目引入字体"></a><strong>H5（nuxt）项目引入字体</strong></h3><p><strong>方法1：</strong><br>1.下载所需要的字体，.ttf格式本文以（FZCYJ.ttf 为例）<br>2.先自己定义一个font.css文件，字体文件的路径引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@font-face &#123;</span><br><span class="line">  font-family: &quot;华文行楷&quot;;</span><br><span class="line">  src: url(&apos;stxingka.ttf&apos;);</span><br><span class="line">  font-weight: normal;</span><br><span class="line">  font-style: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.App.vue中的style里引入 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;less&quot; rel=&quot;stylesheet/less&quot;&gt;</span><br><span class="line">  @import &quot;./common/font/font.css&quot;;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4、添加loader</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">        &#123;</span><br><span class="line">            test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,</span><br><span class="line">            loader: &apos;url-loader&apos;,</span><br><span class="line">            options: &#123;</span><br><span class="line">                limit: 10000,</span><br><span class="line">                name: utils.assetsPath(&apos;fonts/[name].[hash:7].[ext]&apos;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;less&quot; scoped&gt;</span><br><span class="line">    .header&#123;</span><br><span class="line">        font-family: &quot;华文行楷&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>上述方法弊端：</strong></p>
+<pre><code>ttf文件教大，页面加载过慢，影响用户体验
+解决方向：压缩ttf文件</code></pre><p><strong>**方法2：</strong> font-spider（字蛛）压缩ttf**</p>
+<pre><code>先附上官方链接：http://font-spider.org/
+
+GITHUB：https://github.com/aui/font-spider/blob/master/README-ZH-CN.md
+
+使用教程：https://www.jianshu.com/p/8ef246692d14</code></pre><p><strong>上述方法弊端</strong></p>
+<pre><code>font-spider原理是解析html页面中的含有中文字的标签，然后解析标签，将需要的ttf压缩，将压缩后的ttf文件放到项目中去，**但是，这种ttf文件会解析页面中已经存在的字体，而我们的项目是单页面应用，都是打包后的js文件，没有像静态页面中已存在的字体**，所以当我们把压缩好的ttf文件放到静态页面中尝试时，确实是有效的，可当我们放到项目中就失效了，这是我能想到能解释这个现象的唯一原因了。</code></pre><p>所以怎么办？<br><strong>方法3：</strong><br>在万籁俱寂之时，为我无意间翻到了一个网站叫‘有字库“，网址是：<a href="https://www.webfont.com" target="_blank" rel="noopener">https://www.webfont.com</a><br>具体使用方法</p>
+<pre><code>1、注册登录
+2、检索到需要的字体
+3、点击使用，下面照搬就行</code></pre><p><img src="en-resource://database/812:1" alt="daeca34ed56e56127dd312e6d19e15b9.png"><br><img src="en-resource://database/814:1" alt="24a30303d048afa88cfb74b7d650d106.png"><br>这个在线字体库的唯一的优势就是它的js文件通过cdn加速过，加载字体文件的速度提高了，其他并没有什么特别之处。<strong>但是，为什么我后来又放弃了呢？当你搜一下下面的字体时突然发现</strong><br><img src="en-resource://database/816:1" alt="12dfb4e51fb5e840c3d2a75abfa4fb98.png"><br>兄弟有钱不？</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><pre><code>如果你的产品跟你说：“去他妈的用户体验。”我强烈推荐方法1
+如果你使用的前端项目不是基于node应用使用方法2，且你不想这么费事，那就方法3。</code></pre><h1 id="敲黑板"><a href="#敲黑板" class="headerlink" title="敲黑板"></a>敲黑板</h1><pre><code>天真的你们是不是以为这就完了，还有方法4呢？我怎么可能不解决问题就结束了呢？史上最强的解决方案来啦。。。
+我：&quot;那个，口渴吗？&quot;
+她：“什么事？”
+我：“这个图能帮我切一下吗？”
+她：“行啊！”
+我：“顺便把这个字体也放进去吧！”
+她：“可以的，现在就要吗？”
+我：“没事没事，你慢慢做，我不急”
+...半个小时后，美团的小哥在楼梯间吼道：“徐先生，徐先生，您的奶茶到了！”
+完结</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/12/H5（nuxt）项目引入字体(入门到放弃)/" data-id="ck1n3hvfy0001icgv3x9argzw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/12/移动端H5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">移动端H5碰到的问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/12/H5（nuxt）项目引入字体(入门到放弃)/">H5（nuxt）项目引入字体(入门到放弃)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/移动端H5/">移动端H5碰到的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/js技巧/">JS开发技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/css技巧/">css技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/10/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Franco lrxu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

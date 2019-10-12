@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>移动端H5碰到的问题 | 向着光亮的地方</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、ios键盘唤起，键盘收起以后页面不归位问题描述：    输入内容，软键盘弹出，页面内容整体上移，但是键盘收起，页面内容不下滑出现原因分析：    固定定位的元素 在元素内 input 框聚焦的时候 弹出的软键盘占位 失去焦点的时候软键盘消失 但是还是占位的 导致input框不能再次输入 在失去焦点的时候给一个事件 解决办法：在input光标离开时重新设定滚动条的滚动高度方法1： 1234567">
+<meta name="keywords" content="前端全栈 大前端 前端工程化 移动端H5 小程序 vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端H5碰到的问题">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/移动端H5/index.html">
+<meta property="og:site_name" content="向着光亮的地方">
+<meta property="og:description" content="1、ios键盘唤起，键盘收起以后页面不归位问题描述：    输入内容，软键盘弹出，页面内容整体上移，但是键盘收起，页面内容不下滑出现原因分析：    固定定位的元素 在元素内 input 框聚焦的时候 弹出的软键盘占位 失去焦点的时候软键盘消失 但是还是占位的 导致input框不能再次输入 在失去焦点的时候给一个事件 解决办法：在input光标离开时重新设定滚动条的滚动高度方法1： 1234567">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-12T04:59:56.685Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动端H5碰到的问题">
+<meta name="twitter:description" content="1、ios键盘唤起，键盘收起以后页面不归位问题描述：    输入内容，软键盘弹出，页面内容整体上移，但是键盘收起，页面内容不下滑出现原因分析：    固定定位的元素 在元素内 input 框聚焦的时候 弹出的软键盘占位 失去焦点的时候软键盘消失 但是还是占位的 导致input框不能再次输入 在失去焦点的时候给一个事件 解决办法：在input光标离开时重新设定滚动条的滚动高度方法1： 1234567">
+  
+    <link rel="alternate" href="/atom.xml" title="向着光亮的地方" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">向着光亮的地方</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">莲蓉苞</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-移动端H5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/12/移动端H5/" class="article-date">
+  <time datetime="2019-10-12T04:59:35.992Z" itemprop="datePublished">2019-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      移动端H5碰到的问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="1、ios键盘唤起，键盘收起以后页面不归位"><a href="#1、ios键盘唤起，键盘收起以后页面不归位" class="headerlink" title="1、ios键盘唤起，键盘收起以后页面不归位"></a>1、ios键盘唤起，键盘收起以后页面不归位</h5><p><strong>问题描述：</strong><br>    输入内容，软键盘弹出，页面内容整体上移，但是键盘收起，页面内容不下滑<br><strong>出现原因分析：</strong><br>    固定定位的元素 在元素内 input 框聚焦的时候 弹出的软键盘占位 失去焦点的时候软键盘消失 但是还是占位的 导致input框不能再次输入 在失去焦点的时候给一个事件</p>
+<p><strong>解决办法：在input光标离开时重新设定滚动条的滚动高度<br>方法1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;list-warp&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;title&quot;&gt;&lt;span&gt;投·被保险人姓名&lt;/span&gt;&lt;/div&gt;</span><br><span class="line">   &lt;div class=&quot;content&quot;&gt;</span><br><span class="line">     &lt;input class=&quot;content-input&quot; </span><br><span class="line">            placeholder=&quot;请输入姓名&quot;</span><br><span class="line">            v-model=&quot;peopleList.name&quot;</span><br><span class="line">           @focus=&quot;changefocus()&quot;</span><br><span class="line">           @blur.prevent=&quot;changeBlur()&quot;/&gt;    &lt;/div&gt;</span><br><span class="line"> &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">changeBlur()&#123;</span><br><span class="line">      let u = navigator.userAgent, app = navigator.appVersion;</span><br><span class="line">      let isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);</span><br><span class="line">      if(isIOS)&#123;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">          const scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0</span><br><span class="line">          window.scrollTo(0, Math.max(scrollHeight - 1, 0))</span><br><span class="line">          &#125;, 200)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法2：原理同上-输入框失去焦点（即键盘隐藏时），手动调整页面</strong><br><a href="https://blog.csdn.net/m0_37520980/article/details/86305488" target="_blank" rel="noopener"><strong>原文链接</strong></a><br><strong>scrollIntoViewIfNeeded</strong><br>如果设置为 true,并且当前元素在视窗的可见范围内不可见，元素将尽量滚动到父元素可视区域的中部位置（垂直方向）<br>如果设置为 false,并且当前元素在视窗的可见范围内不可见，元素将尽量滚动到父元素可视区域距离最近的一边，至于到底滚动到父元素的顶部还是底部，取决于滚动的子元素距离父元素的哪一边比较近。<br>弊端：兼容性不足</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(()=&gt;&#123;</span><br><span class="line">  document.activeElement.scrollIntoViewIfNeeded(true);</span><br><span class="line">&#125;,100)</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、-extend-x-y-注意项"><a href="#2、-extend-x-y-注意项" class="headerlink" title="2、$.extend(x, y)注意项"></a>2、$.extend(x, y)注意项</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let x = &#123;a: 1&#125;, y = &#123;b: 2&#125;;</span><br><span class="line">$.extend(x, y);</span><br><span class="line">console.log(x, y);//&#123;a: 1, b: 2&#125;, &#123;b: 2&#125;</span><br><span class="line">注意：x的指针发生变化，当用到共用属性时，一定到放在后面参数的位子，也就是y的位置。否则共用属性会发生改变</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/12/移动端H5/" data-id="ck1n3hvg40004icgvlarxvgzs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/12/H5（nuxt）项目引入字体(入门到放弃)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          H5（nuxt）项目引入字体(入门到放弃)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/12/js技巧/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JS开发技巧</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/12/H5（nuxt）项目引入字体(入门到放弃)/">H5（nuxt）项目引入字体(入门到放弃)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/移动端H5/">移动端H5碰到的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/js技巧/">JS开发技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/css技巧/">css技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/10/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Franco lrxu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
